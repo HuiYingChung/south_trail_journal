@@ -42,12 +42,10 @@ body {
 
 /* Navigation hamburger */
 
-
 .nav-menu .menu-list {
   display: none;
   padding: 1rem;
 }
-
 .nav-menu .menu-icon {
   background: none;
   border: none;
@@ -55,11 +53,9 @@ body {
   cursor: pointer;
   color: var(--text);
 }
-
 .nav-menu #menu-toggle:checked ~ .menu-list {
   display: block;
 }
-
 .nav-menu .menu-list ul {
   list-style: none;
   text-align: center;
@@ -78,7 +74,6 @@ body {
   background-color: var(--secondary);
   color: var(--background);
 }
-
 .menu-icon {
   float: right;
   position: relative;
@@ -97,12 +92,12 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/* 所有幻灯片初始放最底层 */
 .hero-slide {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -110,7 +105,6 @@ body {
   animation: slideFade 10s infinite;
 }
 
-/* 两张幻灯片的延迟设置 */
 .hero-slide:nth-child(1) {
   animation-delay: 0s;
 }
@@ -118,28 +112,25 @@ body {
   animation-delay: 5s;
 }
 
-/* 关键帧同时切换 opacity 与 z-index */
 @keyframes slideFade {
-  /* 0%–49.99%：visible，z-index 提升 */
+
   0%, 49.99% {
     opacity: 1;
     z-index: 1;
   }
-  /* 50%–100%：hidden，z-index 回到底层 */
+  
   50%, 100% {
     opacity: 0;
     z-index: 0;
   }
 }
 
-/* 按钮保持在内容层之上 */
 .hero-content {
   position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;  /* 始终在 slide 之上 */
-  
+  z-index: 2;  
   color: white;
   text-align: center;
   background: rgba(0,0,0,0.4);
@@ -160,7 +151,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .hero-content button:hover {
   background-color: var(--accent);
   transform: translateY(-2px);
@@ -170,13 +160,10 @@ body {
 /* Main */
 
 /* Trail stories */
-/* 1. 區塊整體 */
 .trail-stories {
   background-color: var(--background);
   padding: 2rem 1rem;
 }
-
-/* 2. 標題區 */
 .trail-header {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -191,16 +178,12 @@ body {
   color: var(--text);
   opacity: 0.8;
 }
-
-/* 3. 文章卡片容器 */
 .story-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-bottom: 2rem;
 }
-
-/* 5. 單張卡片 */
 .story-card {
   background-color: white;
   border-radius: 0.5rem;
@@ -208,25 +191,15 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .story-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
-
-/* 6. 精選卡加大顯示 */
-.story-card.featured {
-  grid-column: 1 / -1;
-}
-
-/* 7. 圖片 */
 .story-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
-/* 8. 內文 */
 .story-content {
   padding: 1rem;
 }
@@ -242,7 +215,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* 9. 讀取更多連結 */
+/* Read More - link*/
 .read-more {
   display: inline-block;
   font-size: 0. ninerem;
@@ -265,7 +238,7 @@ body {
   transform: translateX(4px);
 }
 
-/* 10. See More 按鈕 */
+/* See More Trails like these - link*/
 .see-more-wrapper {
   text-align: center;
   margin-top: 1rem;
@@ -292,16 +265,13 @@ body {
 [aria-labelledby="tag-heading"] {
   padding: 1rem 0.5rem;
 }
-
 [aria-labelledby="tag-heading"] h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
-
 .tag-list {
   gap: 0.5rem;
 }
-
 .tag-list button {
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
@@ -309,35 +279,26 @@ body {
   margin: 0.25rem;
 }
 .tag-list button:hover {
-  /* 原有的背景色或文字色切换留着不变 */
-  /* 新增阴影效果 */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Voices from the Trail */
-
 .trail-voices {
   background-color: var(--background);
   padding: 2rem 1rem;
   text-align: center;
 }
-
 .trail-voices h2 {
   font-size: 1.75rem;
   color: var(--primary);
   margin-bottom: 1.5rem;
 }
-
-/* 引用列表布局：手机一列，平板两列，桌面三列 */
 .voices-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
-
-
-/* 单个 blockquote 样式 */
 .voices-list blockquote {
   position: relative;
   padding: 1rem 1.5rem;
@@ -348,13 +309,10 @@ body {
   color: var(--text);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .voices-list blockquote:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
-
-/* 左侧大引号装饰 */
 .voices-list blockquote::before {
   content: "“";
   position: absolute;
@@ -364,8 +322,6 @@ body {
   color: var(--secondary);
   line-height: 1;
 }
-
-/* 引用来源 */
 .voices-list cite {
   display: block;
   margin-top: 0.75rem;
@@ -375,11 +331,10 @@ body {
   text-align: right;
 }
 
-/* CTA 按钮 */
+/* CTA button */
 .cta-wrapper {
   text-align: center;
 }
-
 .cta-button {
   display: inline-block;
   background-color: var(--accent);
@@ -392,7 +347,6 @@ body {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: var(--primary);
   transform: translateY(-2px);
@@ -401,7 +355,6 @@ body {
 
 
 /* Footer */
-
 .site-footer {
   background-color: var(--primary);
   color: var(--background);
@@ -444,7 +397,7 @@ body {
   transition: color 0.3s ease;
 }
 .footer-nav a:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
 /* Social Icons */
@@ -477,45 +430,104 @@ body {
   color: var(--accent);
 }
 
-/* Tablet 以上：横向布局 */
-@media (min-width: 600px) {
-  
-}
 
 /* ----------Medium screen (Tablet)---------- */
 @media (min-width: 600px) {
-    .story-cards {
-    grid-template-columns: repeat(3, 1fr);
+
+/* Site navigation */
+  .nav-menu .menu-icon,
+  .nav-menu #menu-toggle {
+    display: none;
   }
-    .story-card.featured {
-    grid-column: span 2;
+  .nav-menu {
+    display: block !important;
+    width: 100%;
+    margin: 0.5rem auto;
+    text-align: center;
+    padding: 0;
   }
-    .voices-list {
+  .nav-menu .menu-list {
+    display: block;
+  }
+  .nav-menu .menu-list ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .nav-menu .menu-icon {
+    float: none;
+    position: static;
+    top: auto;
+  }
+
+  /* trail stories */
+  .trail-stories .story-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* voice from the trail */
+  .voices-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* footer */
   .site-footer {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     text-align: left;
     padding: 2rem 4rem;
   }
-  .footer-branding,
-  .footer-nav,
-  .footer-social,
-  .footer-legal {
-    flex: 1;
+  .footer-branding {
+    grid-column: 1;
+  }
+  .footer-nav {
+    grid-column: 2;
   }
   .footer-nav ul {
     justify-content: flex-start;
   }
+  .footer-social {
+    grid-column: 3;
+    justify-self: center;
+  }
   .footer-legal {
-    text-align: right;
+    grid-row: 2;
+    grid-column: 1 / 4;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
   }
 }
 
 /* ----------Large screen (Desktop)----------- */
 @media (min-width: 960px) {
+
+  /* trail stories */
+   .trail-stories .story-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .story-card.featured {
+    grid-column: span 2;
+  }
+
+  /* Voices from the Trail */
     .voices-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* footer */
+    .site-footer {
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+    padding: 2rem 6rem;
+  }
+  .footer-legal {
+    grid-row: 1;
+    grid-column: 4;
+    justify-self: end;
+    margin-top: 0;
+    text-align: right;
   }
 }
