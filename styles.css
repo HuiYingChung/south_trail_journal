@@ -22,6 +22,12 @@ body {
   padding: 1rem;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 /* header */
 
 .logo {
@@ -209,16 +215,16 @@ body {
   margin-bottom: 0.5rem;
 }
 .story-content p {
-  font-size: 0. ninerem;
+  font-size: 0.9rem;
   color: var(--text);
   opacity: 0.85;
   margin-bottom: 0.75rem;
 }
 
-/* Read More - link*/
+/* Read More*/
 .read-more {
   display: inline-block;
-  font-size: 0. ninerem;
+  font-size: 0.9rem;
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
@@ -238,7 +244,7 @@ body {
   transform: translateX(4px);
 }
 
-/* See More Trails like these - link*/
+/* See More Trails like these*/
 .see-more-wrapper {
   text-align: center;
   margin-top: 1rem;
@@ -465,6 +471,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+  .story-card.featured {
+    grid-column: span 2;
+  }
 
   /* voice from the trail */
   .voices-list {
@@ -503,14 +512,29 @@ body {
 
 /* ----------Large screen (Desktop)----------- */
 @media (min-width: 960px) {
+  /* Header and Site navigation */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    padding: 1rem 2rem;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .logo h1 {
+    font-size: 2rem;
+  }
+  .nav-menu .menu-list ul {
+    position: relative;
+    top: 10px;
+  }
 
   /* trail stories */
    .trail-stories .story-cards {
     grid-template-columns: repeat(3, 1fr);
   }
-    .story-card.featured {
-    grid-column: span 2;
-  }
+
 
   /* Voices from the Trail */
     .voices-list {
