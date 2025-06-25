@@ -5,50 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Trail Journal</title>
     <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-…"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+     />
 </head>
 <body>
-    <header>
+   <header class="site-header">
         <div class="logo">
-            <a href="index.html"><img src="images/logo2.png" alt="South Trail Journal Logo" width="200"></a>
+            <a href="index.html">
+            <img src="images/logo3.png" alt="South Trail Journal Logo" >
+            </a>
             <h1>South Trail Journal</h1>
         </div>
-        
-        <input type="checkbox" id="menu-toggle" hidden>
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>  
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="trails.html">TRAILS</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        
-            <form class="search-toggle" role="search">
-            <button type="button" id="search-icon" aria-label="Open search">🔍</button>
-            <input type="text" id="search-input" placeholder="Search..." name="q">
-            </form>
-        </nav>
+
+        <div class="header-right">
+            <!-- <div class="search-bar">
+                <button id="search-icon" aria-label="Search">&#128269;</button>
+            </div> -->
+           
+            <nav class="nav-menu">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <input type="checkbox" id="menu-toggle" hidden >
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="trails.html">TRAILS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <section class="homeHero">
-        <div class="hero-slides">
-            <div class="hero-slide active" style="background-image: url('images/homehero_1.JPG')">
-            <div class="hero-content">
-                <h2>Savoring September in Garner State Park</h2>
-                <button>Explore This Trail</button>
-            </div>
-        </div>
-            <div class="hero-slide" style="background-image: url('images/homehero_2.JPG')">
-            <div class="hero-content">
-                <h2>Autumn Views at Enchanted Rock</h2>
-                <button>Explore This Trail</button>
-            </div>
-        </div>
-            <!-- 更多 slides 可依需要新增 -->
-            
-        </div>
-    </section>
+<section class="homeHero">
+  <div class="hero-slides">
+    <div
+      class="hero-slide active"
+      style="background-image: url('images/homehero_1.JPG')"
+    >
+      <div class="hero-content">
+        <h2>Savoring September in Garner State Park</h2>
+        <button>Explore This Trail</button>
+      </div>
+    </div>
+
+    <div
+      class="hero-slide"
+      style="background-image: url('images/homehero_2.JPG')"
+    >
+      <div class="hero-content">
+        <h2>Autumn Views at Enchanted Rock</h2>
+        <button>Explore This Trail</button>
+      </div>
+    </div>
+
+    <!-- more slides here -->
+  </div>
+</section>
+
 
     <main>
         <section class="trail-stories">
@@ -64,6 +84,8 @@
                     <button data-tag="waterfalls">Waterfalls</button>
                     <button data-tag="flowers">Flowers</button>
                     <button data-tag="all">All</button>
+                    <button data-tag="arkansas">Arkansas</button>
+                    <button data-tag="forests">Forests</button>
                 </div>
             </section>
 

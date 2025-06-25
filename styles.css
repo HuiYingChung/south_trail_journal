@@ -3,3 +3,519 @@
   margin: 0;
   padding: 0;
 }
+/* ---------Global Styles---------- */
+:root {
+  --text: #262626;
+  --background: #f9f5ec;
+  --primary: #6e8d5d;
+  --secondary: #c4a484;
+  --accent: #a3522d;
+}
+
+
+/* ---------Base / Mobile styles (default)---------- */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 1rem;
+}
+
+/* header */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.logo img {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+}
+.logo h1 {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* Navigation hamburger */
+
+
+.nav-menu .menu-list {
+  display: none;
+  padding: 1rem;
+}
+
+.nav-menu .menu-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.nav-menu #menu-toggle:checked ~ .menu-list {
+  display: block;
+}
+
+.nav-menu .menu-list ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav-menu .menu-list a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem 0;
+}
+.nav-menu .menu-list a:hover {
+  background-color: var(--secondary);
+  color: var(--background);
+}
+
+.menu-icon {
+  float: right;
+  position: relative;
+  top: -40px;
+}
+
+/* Hero image */
+.homeHero {
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+.hero-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 所有幻灯片初始放最底层 */
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: 0;
+  animation: slideFade 10s infinite;
+}
+
+/* 两张幻灯片的延迟设置 */
+.hero-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+/* 关键帧同时切换 opacity 与 z-index */
+@keyframes slideFade {
+  /* 0%–49.99%：visible，z-index 提升 */
+  0%, 49.99% {
+    opacity: 1;
+    z-index: 1;
+  }
+  /* 50%–100%：hidden，z-index 回到底层 */
+  50%, 100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+/* 按钮保持在内容层之上 */
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;  /* 始终在 slide 之上 */
+  
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+/* Hero content text */
+.hero-content button {
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content button:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+
+/* Main */
+
+/* Trail stories */
+/* 1. 區塊整體 */
+.trail-stories {
+  background-color: var(--background);
+  padding: 2rem 1rem;
+}
+
+/* 2. 標題區 */
+.trail-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.trail-header h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.trail-header p {
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+/* 3. 文章卡片容器 */
+.story-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* 5. 單張卡片 */
+.story-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* 6. 精選卡加大顯示 */
+.story-card.featured {
+  grid-column: 1 / -1;
+}
+
+/* 7. 圖片 */
+.story-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* 8. 內文 */
+.story-content {
+  padding: 1rem;
+}
+.story-content h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.story-content p {
+  font-size: 0. ninerem;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+/* 9. 讀取更多連結 */
+.read-more {
+  display: inline-block;
+  font-size: 0. ninerem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.read-more::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+.read-more:hover {
+  color: var(--secondary);
+}
+.read-more:hover::after {
+  transform: translateX(4px);
+}
+
+/* 10. See More 按鈕 */
+.see-more-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+.see-more {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--background);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.see-more:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Explore by Tags  */
+[aria-labelledby="tag-heading"] {
+  padding: 1rem 0.5rem;
+}
+
+[aria-labelledby="tag-heading"] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag-list {
+  gap: 0.5rem;
+}
+
+.tag-list button {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 1rem;
+  margin: 0.25rem;
+}
+.tag-list button:hover {
+  /* 原有的背景色或文字色切换留着不变 */
+  /* 新增阴影效果 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Voices from the Trail */
+
+.trail-voices {
+  background-color: var(--background);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.trail-voices h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+/* 引用列表布局：手机一列，平板两列，桌面三列 */
+.voices-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+/* 单个 blockquote 样式 */
+.voices-list blockquote {
+  position: relative;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-style: italic;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voices-list blockquote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* 左侧大引号装饰 */
+.voices-list blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 3rem;
+  color: var(--secondary);
+  line-height: 1;
+}
+
+/* 引用来源 */
+.voices-list cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary);
+  text-align: right;
+}
+
+/* CTA 按钮 */
+.cta-wrapper {
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--background);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/* Footer */
+
+.site-footer {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Branding */
+.footer-branding h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-branding p em {
+  font-style: italic;
+  opacity: 0.8;
+}
+.footer-branding p:last-of-type {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Footer Navigation */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-nav a {
+  color: var(--background);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+.footer-social a {
+  color: var(--background);
+  font-size: 1.25rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.footer-social a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Legal */
+.footer-legal p {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin: 0.25rem 0;
+}
+.footer-legal a {
+  color: var(--background);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.footer-legal a:hover {
+  color: var(--accent);
+}
+
+/* Tablet 以上：横向布局 */
+@media (min-width: 600px) {
+  
+}
+
+/* ----------Medium screen (Tablet)---------- */
+@media (min-width: 600px) {
+    .story-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .story-card.featured {
+    grid-column: span 2;
+  }
+    .voices-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem 4rem;
+  }
+  .footer-branding,
+  .footer-nav,
+  .footer-social,
+  .footer-legal {
+    flex: 1;
+  }
+  .footer-nav ul {
+    justify-content: flex-start;
+  }
+  .footer-legal {
+    text-align: right;
+  }
+}
+
+/* ----------Large screen (Desktop)----------- */
+@media (min-width: 960px) {
+    .voices-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
