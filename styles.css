@@ -417,7 +417,7 @@ body {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 .footer-social a:hover {
-  color: var(--accent);
+  color: var(--secondary);
   transform: translateY(-2px);
 }
 
@@ -433,7 +433,7 @@ body {
   transition: color 0.3s ease;
 }
 .footer-legal a:hover {
-  color: var(--accent);
+  color: var(--text);
 }
 
 
