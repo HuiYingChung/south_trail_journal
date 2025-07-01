@@ -32,7 +32,8 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  
 }
 h2 {
   font-size: 1.5rem;
@@ -90,17 +91,18 @@ button:hover {
 
 
 /* header */
-
+header {
+  padding: 1rem 0;
+  margin: 0 auto;
+}
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
+  gap: 0.25rem;
+  /* justify-content: center; */
 }
 .logo img {
   width: 50px;
-  height: auto;
-  vertical-align: middle;
 }
 
 /* Navigation hamburger */
@@ -170,7 +172,6 @@ button:hover {
   z-index: 0;
   animation: slideFade 10s infinite;
 }
-
 .hero-slide:nth-child(1) {
   animation-delay: 0s;
 }
@@ -197,7 +198,7 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;  
-  color: #ffffff;
+  /* color: #ffffff; */
   text-align: center;
   background: rgba(0,0,0,0.4);
   padding: 1rem 2rem;
@@ -221,7 +222,7 @@ button:hover {
   margin-bottom: 2rem;
 }
 .story-card {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
