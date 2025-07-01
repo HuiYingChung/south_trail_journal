@@ -338,6 +338,7 @@ header {
 
 /* Table Style */
 table {
+  font-size: 0.9rem;
   border-collapse: collapse;
   margin: 2rem auto;
 }
