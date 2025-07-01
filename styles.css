@@ -28,6 +28,12 @@ body {
   padding: 0 1rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
 /* header */
 
 .logo {
@@ -93,6 +99,10 @@ body {
   overflow: hidden;
   height: 400px;
 }
+
+.hero-content h2{
+  color:#ffffff;
+}
 .hero-slides {
   position: relative;
   width: 100%;
@@ -137,7 +147,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;  
-  color: white;
+  color: #ffffff;
   text-align: center;
   background: rgba(0,0,0,0.4);
   padding: 1rem 2rem;
@@ -147,7 +157,7 @@ body {
 /* Hero content text */
 .hero-content button {
   background-color: var(--primary);
-  color: var(--background);
+  color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -167,18 +177,13 @@ body {
 
 /* Trail stories */
 .trail-stories {
-  background-color: var(--background);
   padding: 2rem 1rem;
 }
 .trail-header {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.trail-header h2 {
-  font-size: 1.75rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
+
 .trail-header p {
   font-size: 1rem;
   color: var(--text);
@@ -252,7 +257,7 @@ body {
 .see-more {
   display: inline-block;
   background-color: var(--accent);
-  color: var(--background);
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -290,15 +295,10 @@ body {
 
 /* Voices from the Trail */
 .trail-voices {
-  background-color: var(--background);
   padding: 2rem 1rem;
   text-align: center;
 }
-.trail-voices h2 {
-  font-size: 1.75rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
+
 .voices-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -344,7 +344,7 @@ body {
 .cta-button {
   display: inline-block;
   background-color: var(--accent);
-  color: var(--background);
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -363,7 +363,7 @@ body {
 /* Footer */
 .site-footer {
   background-color: var(--primary);
-  color: var(--background);
+  color: #ffffff;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -371,10 +371,17 @@ body {
   gap: 1.5rem;
   text-align: center;
 }
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
 /* Branding */
 .footer-branding h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .footer-branding p em {
@@ -397,7 +404,6 @@ body {
   justify-content: center;
 }
 .footer-nav a {
-  color: var(--background);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -412,7 +418,6 @@ body {
   gap: 1rem;
 }
 .footer-social a {
-  color: var(--background);
   font-size: 1.25rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -428,7 +433,7 @@ body {
   margin: 0.25rem 0;
 }
 .footer-legal a {
-  color: var(--background);
+  font-size: 0.75rem;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
