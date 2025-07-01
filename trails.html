@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Trail Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"> 
+
+</head>
+<body>
+  <div class="container">
+   <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/logo3.png" alt="South Trail Journal Logo" >
+            </a>
+            <h1>South Trail Journal</h1>
+        </div>
+
+        <div class="header-right">
+            <!-- <div class="search-bar">
+                <button id="search-icon" aria-label="Search">&#128269;</button>
+            </div> testtest-->
+           
+            <nav class="nav-menu">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <input type="checkbox" id="menu-toggle" hidden >
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="trails.html">TRAILS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<section class="homeHero">
+  <div class="hero-slides">
+    <div
+      class="hero-slide active"
+      style="background-image: url('images/homehero_1.JPG')"
+    >
+      <div class="hero-content">
+        <h2>Savoring September in Garner State Park</h2>
+        <button>Explore This Trail</button>
+      </div>
+    </div>
+
+    <div
+      class="hero-slide"
+      style="background-image: url('images/homehero_2.JPG')"
+    >
+      <div class="hero-content">
+        <h2>Autumn Views at Enchanted Rock</h2>
+        <button>Explore This Trail</button>
+      </div>
+    </div>
+
+    <!-- more slides here -->
+  </div>
+</section>
+
+
+    <main>
+        <section class="trail-stories">
+            <header class="trail-header">
+                <h2>Top Stories from the Trail</h2>
+                <p>Real stories from real hikers — discover, reflect, and plan your next trip.</p>
+            </header>
+
+            <section aria-labelledby="tag-heading">
+                <h3 id="tag-heading">Explore by Tags:</h3>
+                <div class="tag-list">
+                    <button data-tag="texas">Texas</button>
+                    <button data-tag="waterfalls">Waterfalls</button>
+                    <button data-tag="flowers">Flowers</button>
+                    <button data-tag="all">All</button>
+                    <button data-tag="arkansas">Arkansas</button>
+                    <button data-tag="forests">Forests</button>
+                </div>
+            </section>
+
+            <div class="story-cards">
+                <article class="story-card featured">
+                <img src="images/story1.JPG" alt="Where Forests Meet the River">
+                <div class="story-content">
+                    <h3>Where Forests Meet the River</h3>
+                    <p>Nested in the heart of the Texas Hill Country, this trail offers sweeping views, quiet forests...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                </article>
+
+                <article class="story-card">
+                <img src="images/story2.JPG" alt="Whispers of the Ozarks">
+                <div class="story-content">
+                    <h3>Whispers of the Ozarks</h3>
+                    <p>Tucked away in the Ozarks, this hidden gem is a must-hike for those seeking solitude...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                </article>
+
+                <article class="story-card">
+                <img src="images/story3.JPG" alt="A Gentle Escape into Nature">
+                <div class="story-content">
+                    <h3>A Gentle Escape into Nature</h3>
+                    <p>Perfect for a weekend escape, this family-friendly hike winds past wildflowers...</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                </article>
+
+                <article class="story-card">
+                <img src="images/story4.JPG" alt="A Gentle Escape into Nature">
+                <div class="story-content">
+                    <h3>Sunlight Through the Cedars</h3>
+                    <p>This peaceful trail winds through a cedar forest where golden rays filter through the canopy. Ideal for solo hikers seeking reflection and calm.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                </article>
+
+                <article class="story-card">
+                <img src="images/story5.JPG" alt="A Gentle Escape into Nature">
+                <div class="story-content">
+                    <h3>Red Rock Echoes of Palo Duro</h3>
+                    <p>Explore the vibrant canyons and layered cliffs of Palo Duro, where desert colors shift with the sun and every bend reveals a new wonder of the Texas Panhandle.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </div>
+                </article>
+
+            </div>
+
+            <div class="see-more-wrapper">
+                <a href="#" class="see-more">➔ See More Trails Like These</a>
+            </div>
+        </section>
+
+        <section class="trail-voices">
+            <h2>Voices from the Trail</h2>
+
+            <div class="voices-list">
+                <blockquote>
+                <p>"Found a perfect weekend trail thanks to this site!"</p>
+                <cite>— Jenna, OK</cite>
+                </blockquote>
+
+                <blockquote>
+                <p>"Real hikers. Real stories. See how the trails inspired them."</p>
+                </blockquote>
+
+                <blockquote>
+                <p>"Every step tells a story — here’s what our community has to say."</p>
+                </blockquote>
+            </div>
+
+            <div class="cta-wrapper">
+                <a href="#" class="cta-button">Add Your Voice to the Journal</a>
+            </div>
+        </section>
+           
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-branding">
+            <h3>South Trail Journal</h3>
+            <p><em>Explore. Hike. Share.</em></p>
+            <p>Your trusted guide to trails across Texas, Oklahoma, Missouri, and Arkansas.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Trails by State</a></li>
+            <li><a href="#">Journal Entries</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" aria-label="Trail Tools"><i class="fas fa-hiking"></i></a>
+        </div>
+
+        <div class="footer-legal">
+            <p>© 2025 South Trail Journal. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </div>
+    </footer>
+
+  </div>  
+</body>
+</html>
