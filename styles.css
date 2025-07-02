@@ -558,6 +558,9 @@ tr:nth-of-type(even) {
     align-items: last baseline;
     padding: 1rem 2rem;
   }
+  .logo {
+    justify-content: start;
+  }
   .logo img {
     width: 100px;
   }
