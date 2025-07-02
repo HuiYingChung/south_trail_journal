@@ -26,14 +26,23 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+a {
+  text-decoration: none;
+}
 h1, h2, h3, h4 {
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--primary);
 }
 h1 {
-  font-size: 1.5rem;
-  
+  font-size: 1.5rem; 
+}
+h1 a {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+h1 a:hover {
+  color: var(--accent);
 }
 h2 {
   font-size: 1.5rem;
@@ -80,7 +89,6 @@ button:hover {
   font-weight: 600;
   border-radius: 2rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 .cta-button:hover {
@@ -130,7 +138,6 @@ header {
   gap: 0.5rem;
 }
 .nav-menu .menu-list a {
-  text-decoration: none;
   color: var(--text);
   font-weight: bold;
   display: block;
@@ -254,7 +261,6 @@ header {
   font-size: 0.9rem;
   color: var(--accent);
   font-weight: 600;
-  text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -365,7 +371,6 @@ table a {
 table a:hover {
   color: var(--secondary);
 }
-
 th,td {
   /* border: 1px solid var(--secondary); */
   padding: 0.5rem;
