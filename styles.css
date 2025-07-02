@@ -675,7 +675,7 @@ input[type="file"] {
   }
   .form-group .submit-button {
     grid-column: 2;
-    width: 50%;
+    width: 60%;
   }
   /* footer */
     .site-footer {
