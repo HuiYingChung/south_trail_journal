@@ -71,6 +71,7 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
+
 button:hover {
   background-color: var(--accent);
   transform: translateY(-2px);
@@ -160,6 +161,7 @@ header {
   overflow: hidden;
   height: 450px;
 }
+
 .hero-content h2{
   color:#ffffff;
 }
@@ -253,6 +255,9 @@ header {
   color: var(--text);
   opacity: 0.85;
   margin-bottom: 0.75rem;
+}
+.story-card.featured {
+  min-width: 100%;
 }
 
 /* Read More*/
@@ -575,6 +580,57 @@ video {
   text-decoration: none;
 }
 
+/* Trail Article style */
+article {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);  
+}
+
+article h2 {
+  font-size: 1.8rem;
+  margin: 1.25rem 0;
+  line-height: 1.3;
+}
+
+article h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+article p {
+  margin-bottom: 1.2rem;
+}
+
+article ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+article ul li {
+  margin-bottom: 0.6rem;
+  list-style-type: disc;
+}
+
+.trail-video {
+  margin-top: 2rem;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.trail-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* Footer */
 .site-footer {
   background-color: var(--primary);
@@ -766,6 +822,7 @@ video {
    .trail-stories .story-cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
 
 
   /* Voices from the Trail */
