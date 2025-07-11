@@ -45,7 +45,7 @@ h1 a:hover {
   color: var(--accent);
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -163,6 +163,7 @@ header {
 }
 
 .hero-content h2{
+  font-size: 1.5rem;
   color:#ffffff;
 }
 .hero-slides {
@@ -355,7 +356,7 @@ header {
   margin: 2rem auto;
   max-width: 850px;
 }
-.responsive-table h2, responsive-table p {
+.responsive-table h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -463,14 +464,11 @@ input[type="file"] {
 .photo-gallery {
   padding: 2rem 1rem;
 }
-.photo-gallery h2 {
+.photo-gallery h2, .photo-gallery p {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.photo-gallery p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
+
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -482,7 +480,6 @@ input[type="file"] {
   display: block;
 }
 .grid-gallery figcaption {
-
   background: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   padding: 0.5rem;
@@ -543,7 +540,6 @@ video {
 .news-section h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
 /* News article cards */
