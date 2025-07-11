@@ -346,6 +346,7 @@ header {
 /* Table Style */
 .responsive-table {
   margin: 2rem auto;
+  max-width: 850px;
 }
 .responsive-table h2, responsive-table p {
   text-align: center;
@@ -450,6 +451,83 @@ input[type="file"] {
 .form-group .submit-button {
   padding: 0.75rem 1.5rem;
 }
+
+/* Photo Gallery */
+.photo-gallery {
+  padding: 2rem 1rem;
+}
+.photo-gallery h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.grid-gallery figure:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+.grid-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid-gallery figcaption {
+
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+/* Video Styles */
+.video-gallery {
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+.video-gallery h2, .featured-video > p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.video-description {
+  margin-top: 0.5rem;
+}
+.more-trail-video {
+  margin-top: 1rem;
+}
+.more-trail-video ul {
+  list-style: none;
+}
+.more-trail-video li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.more-trail-video a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.more-trail-video a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+
 /* Footer */
 .site-footer {
   background-color: var(--primary);
@@ -677,6 +755,15 @@ input[type="file"] {
     grid-column: 2;
     width: 60%;
   }
+
+  /* Video Gallery */
+  .video-container {
+    flex-wrap: nowrap;
+  }
+  video {
+    width: 60%;
+  }
+
   /* footer */
     .site-footer {
     grid-template-columns: repeat(4, 1fr);
